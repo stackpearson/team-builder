@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.member-list-container {
+  
+}
+
+.member-list {
+  display: flex;
+  background-color: aquamarine;
+  
+  
+}
+
+.member-container {
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  margin: 2%;
+}
+
+.member-container ul {
+  list-style-type: none;
+  text-align: left;
+}
