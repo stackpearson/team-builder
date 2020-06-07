@@ -1,13 +1,13 @@
 import React from 'react';
 
 const Members = props => {
-    console.log('props from members', props.members)
+    console.log('props from members', props)
     return (
         <div className='member-list'>
-            {props.members.map(member => (
+            {props.teamMembers.map(member => (
             <div className="member-container" key={member.id}>
-              <h2>{member.name} | {member.role}</h2>
-                <p>{member.email}</p>
+              <h2>{member.memberName} | {member.memberRole}</h2>
+                <p>{member.memberEmail}</p>
             </div>
           ))}
         </div>
