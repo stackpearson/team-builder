@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const MemberForm = props => {
-    console.log('props from Form', props);
+    console.log('Form membersToEdit', props.memberToEdit);
 
-    const [teamMember, setTeamMember] = useState({memberName: 'Enter Name', memberRole: 'Enter Role', memberEmail: 'Enter Email' })
+    const [teamMember, setTeamMember] = useState({memberName: '', memberRole: '', memberEmail: '' })
 
     const changeHandler = event => {
-        // console.log(event.target.value)
-        // console.log(event.target.name)
 
         setTeamMember({...teamMember, [event.target.name]: event.target.value });
     }
@@ -18,10 +16,14 @@ const MemberForm = props => {
         setTeamMember({memberName: '', memberRole: '', memberEmail: ''});
     }
 
+    useEffect (() => {
+        
+
+    }, [props.memberToEdit]);
+
     return (
         <form onSubmit={submitForm}>
 
-            <h2>Welcome! Please enter Your Information Here:</h2>
             <div className="form-container">
                 <div className="form-entries">
                     <label hmtlFor='memberName'>Name: </label>

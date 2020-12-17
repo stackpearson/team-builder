@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+#edit-member-form {
+  display: none;
+}
+
 .form-container {
   display: flex;
   justify-content: center;
@@ -39,6 +43,8 @@ code {
 
 .member-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: aquamarine;
   border-radius: 10px;
   

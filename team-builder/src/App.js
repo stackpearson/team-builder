@@ -11,7 +11,18 @@ const [teamMembers, setTeamMembers] = useState([
     memberEmail: 'John_Doe@gmail.com',
     memberRole: 'CEO'
   }
+
 ]);
+
+const openEditForm = memberCard => {
+  const showEditForm = document.getElementById('edit-member-form');
+  showEditForm.style.display = 'block';
+}
+
+const memberToEdit = memberCard => {
+  const showEditForm = document.getElementById('edit-member-form');
+  showEditForm.style.display = 'block';
+}
 
 const addNewTeamMembers = member => {
   
@@ -19,11 +30,12 @@ const addNewTeamMembers = member => {
 }
   return (
     <div className="App">
+      <h2>Welcome! Please enter Your Information Here:</h2>
       
-      <MemberForm addNewTeamMembers={addNewTeamMembers} />
+      <MemberForm addNewTeamMembers={addNewTeamMembers} memberToEdit={memberToEdit} />
       <div class="member-list-container">
       <h1>Our Team Members</h1>
-        <Members teamMembers={teamMembers} />
+        <Members teamMembers={teamMembers}/>
       </div>
       
     </div>
